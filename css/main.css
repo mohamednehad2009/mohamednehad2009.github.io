@@ -1,0 +1,353 @@
+
+/* ======== General Styling ======== */
+html, body {
+	height: 100%;
+	width: 100%;
+	margin: 0px;
+}
+button {
+	border: none;
+}
+h1, h2, h3, h4, h5 {
+	padding: 0px;
+	margin: 0px;
+}
+input {
+	color: #282828;
+	text-align: left;
+	padding: 2px 5px;
+	border: none;
+	border-bottom-right-radius: 2px;
+	border-top-right-radius: 2px;
+}
+.row {
+	padding: 0;
+	margin: 0 !important;
+}
+.content-div a:hover {
+	text-decoration: none;
+}
+.input:focus, .emailInput:focus {
+	outline-color: transparent !important;
+}
+button:disabled:hover {
+	cursor: not-allowed
+}
+
+/* <!-- ======== styling of background Images Div ======== --> */
+.background {
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+/* <!-- ======== styling of gradient background Div ======== --> */
+.gradient-div {
+	position: absolute;
+	z-index: 0;
+	top: 0;
+	right: 0;
+	opacity: 0.7;
+	width: 100%;
+	height: 100%;
+	background-image: linear-gradient(45deg, #006a94, #b90072);
+	transition: all 0.8s ease-in-out;
+}
+
+/* <!-- ======== styling of White background Div During signing Up ======== --> */
+.up-clicked+.gradient-div {
+	transition: all 0.8s ease-in-out;
+	background: rgba( 255, 255, 255, 0.9);
+}
+.up-clicked .right h1 {
+	color: #006a94;
+}
+.up-clicked .right span {
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* <!-- ======== styling of login body ======== --> */
+.content-div {
+	position: relative;
+	z-index: 2;
+	height: 100%;
+}
+
+/* ======== right side ======== */
+.content-div h1 {
+	font-family: 'Pacifico', cursive;
+	color: white;
+	margin-bottom: 5px;
+}
+.content-div span {
+	font-size: 0.8em;
+	padding: 2px 10px;
+	color: white;
+}
+.content-div .left, .content-div .right {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 0;
+}
+
+/* ======== left side ======== */
+
+/* ======== Login Card Styling ======== */
+.login-card {
+	width: auto;
+	border-radius: 20px;
+	margin: 10px auto;
+	background-color: rgba(255, 255, 255, 1);
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	position: relative;
+}
+.card-head {
+	font-size: 0.9em;
+	color: #909090;
+	border-bottom: 1px solid #cecece;
+	padding-bottom: 10px;
+	margin: 10px 0;
+}
+
+/*  ======== Inputs styling ========  */
+.input-div {
+	width: 200px;
+	height: 30px;
+	display: block;
+	margin: 20px;
+	position: relative;
+}
+.input, .emailInput {
+	width: 90%;
+	background: transparent;
+	z-index: 4;
+	position: relative;
+	font-size: 0.8em;
+	font-size: 0.9em;
+	color: #4d4d4d;
+}
+
+/* Input icons  */
+.input-div svg {
+	color: #00b7ff;
+}
+.input-div .hr {
+	width: 20%;
+	height: 3px;
+	background-color: #00b7ff;
+	transition: all 0.5s;
+	border-radius: 15px;
+}
+.hr-focus {
+	width: 100% !important;
+	transition: all 0.5s;
+}
+
+/* ======== inputs placeholder ======== */
+.placeholder {
+	position: absolute;
+	left: 10%;
+	top: 0;
+	font-size: 0.9em;
+	transition: all 0.5s;
+	color: #acacac;
+}
+.focus, .sign-up .placeholder.focus {
+	font-size: 0.7em;
+	top: -15px;
+	left: 0;
+	transition: all 0.5s;
+}
+.sign-up .placeholder.focus {
+	color: white;
+}
+
+/* ======== remember me checkbox ======== */
+.remember {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.check-container {
+	display: block;
+	position: relative;
+	padding-left: 30px;
+	margin-bottom: 12px;
+	color: #909090;
+	cursor: pointer;
+	font-size: 0.8em;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.check-container input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
+}
+.checkmark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 20px;
+	width: 20px;
+	border-radius: 50%;
+	background-color: #eee;
+	border: 1px solid #00b7ff
+}
+.check-container:hover input~.checkmark {
+	background-color: #ccc;
+}
+.check-container input:checked~.checkmark {
+	background-color: #2196F3;
+}
+.checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+.check-container input:checked~.checkmark:after {
+	display: block;
+}
+.check-container .checkmark:after {
+	left: 8px;
+	top: 3px;
+	width: 5px;
+	height: 10px;
+	border: solid white;
+	border-width: 0 3px 3px 0;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+/* ======== sign in and create account buttons ===  */
+
+.sign-in button {
+	text-align: center;
+	color: white;
+	background-image: linear-gradient(45deg, #006a94, #00b7ff);
+	display: block;
+	width: 100%;
+	margin: 10px auto 0px;
+	font-weight: bold;
+	padding: 5px;
+	font-size: 1.2em;
+}
+
+/* ======== sign up section ===  */
+.sign-up {
+	position: absolute;
+	bottom: 0;
+	background-image: url(../image/burg.jpg);
+	background-position: center;
+	background-size: cover;
+	width: 100%;
+	z-index: 5;
+}
+.signup-btn {
+	background-color: transparent;
+	margin: auto;
+	display: block;
+	color: white;
+	font-size: 0.8em;
+	width: 100%;
+}
+.hvr{
+	height: 26px;
+}
+.hvr:hover {
+	-webkit-transition: all 0.5s;
+	/* For Safari 3.1 to 6.0 */
+	transition: all 0.5s;
+	height: 35px !important;
+	cursor: pointer;
+}
+.form {
+	display: none;
+}
+.sign-up .form .input-div {
+	font-size: 0.8em;
+	height: auto;
+	padding: 2px 5px;
+	background-color: white;
+	border-radius: 15px;
+	margin: 0 auto;
+}
+.sign-up .form-parents {
+	margin: 1em auto;
+}
+.sign-up .placeholder {
+	top: 3px;
+}
+.sign-up .sign-in {
+	position: absolute;
+	width: 100%;
+	margin-bottom: 0px !important;
+}
+.sign-up .sign-in button {
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+}
+.input-div .input, .input-div .emailInput {
+	width: 80%;
+}
+.input-div .fa-exclamation-circle {
+	color: red !important;
+	display: none;
+}
+
+.form-parents span {
+	color: white;
+	margin: auto;
+	font-size: 0.7em !important;
+	display: none;
+}
+
+#closeX {
+	font-size: 1.2em;
+	cursor: pointer;
+	float: right;
+	color: white !important;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	z-index: 99;
+	display: none;
+}
+
+/* media query of small screens  */
+
+
+
+@media only screen and (max-width: 767px) {
+	.content-div .left, .content-div .right{
+		height: auto !important;
+		margin: 20px 0;
+	}
+	.content-div.row{
+		flex-direction: column-reverse;
+		justify-content: center;
+	}
+  }
+  @media only screen and (max-height: 374px) {
+	 .content-div .right{
+		display: none;
+	}
+ 
+  }

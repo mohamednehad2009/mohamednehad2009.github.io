@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Login - Boomer </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- custome style -->
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+</head>
+<body>
+    <!-- ======== Master div of Login content ======== -->
+    <div class="content-div row">
+        <!-- left side (login content) -->
+        <div class="left col-md-6">
+            <!-- login card -->
+            <div class="login-card">
+                <!-- Login Header  -->
+                <b class="text-center card-head">Member Login</b>
+                <!-- Sign in content -->
+                <div id="signValidation">
+                    <!-- Sign in Username Div -->
+                    <div class="input-div user">
+                        <i class="fas fa-user"></i>
+                        <p class="placeholder">Username</p>
+                        <input class="input" id="user" placeholder="" type="text">
+                        <i class="fas fa-exclamation-circle"></i>
+                        <div class="hr"></div>
+                    </div>
+                    <!-- Sign in Password Div  -->
+                    <div class="input-div password">
+                        <i class="fas fa-unlock-alt"></i>
+                        <p class="placeholder">Password</p>
+                        <input class="input" placeholder="" type="password">
+                        <i class="fas fa-exclamation-circle"></i>
+                        <div class="hr"></div>
+                    </div>
+                    <!-- Remember me Div -->
+                    <div class="remember">
+                        <label class="check-container">Remember me
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <!-- Sign in btn Div -->
+                    <div class="sign-in ">
+                        <button id="signIn"> Sign in </button>
+                    </div>
+                </div>
+                <!-- Sign in content -->
+                <div class="sign-up hvr" id="formValidation">
+                    <!-- Sign up Header  -->
+                    <div class="signup-btn  text-center py-1">you don't have an account ? </div>
+                    <div id="closeX"  ><i class="far fa-times-circle"></i></div>
+                    <!-- Sign up form -->
+                    <div class="form" >
+                        <div class="form-parents">
+                            <!-- sign up Username -->
+                            <div class="input-div  user">
+                                <i class="fas fa-user"></i>
+                                <p class="placeholder">Username</p>
+                                <input class="input us" placeholder="" type="text">
+                                <i class="fas fa-exclamation-circle"></i>
+                            </div>
+                        </div>
+                        <div class="form-parents">
+                            <!-- sign up E-mail -->
+                            <div class="input-div user">
+                                <i class="fas fa-envelope"></i>
+                                <p class="placeholder">E-mail</p>
+                                <input class="emailInput" id="email" placeholder="" type="text">
+                                <i class="fas fa-exclamation-circle"></i>
+                            </div>
+                            <span class=" text-center">Type A valid E-mail</span>
+                        </div>
+                        <div class="form-parents">
+                            <!-- sign up Password -->
+                            <div class="input-div password">
+                                <i class="fas fa-unlock-alt"></i>
+                                <p class="placeholder">password</p>
+                                <input class="input" id="pass1" placeholder="" type="password">
+                                <i class="fas fa-exclamation-circle"></i>
+                            </div>
+                            <span class=" text-center">at least 6 characters</span>
+                        </div>
+                        <div class="form-parents">
+                            <!-- sign up Confirming Password -->
+                            <div class="input-div password">
+                                <i class="fas fa-unlock-alt"></i>
+                                <p class="placeholder">Confirm Password</p>
+                                <input class="input" id="pass2" placeholder="" type="password">
+                                <i class="fas fa-exclamation-circle"></i>
+                            </div>
+                            <span class=" text-center">Different Password!</span>
+                        </div>
+                        <!-- sign up btn div  -->
+                        <div class="sign-in">
+                            <button id="signUp" > Create Account </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- right side (welcome message) -->
+        <div class="right col-md-6">
+            <div class="text text-center mx-auto">
+                <h1>welcome back!</h1>
+                <span id="writerEffect"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======== gradient background div ======== -->
+    <div class="gradient-div"></div>
+
+    <!-- ======== fading background div (images) ======== -->
+    <div class="background" id="back"></div>
+
+    <!-- ======== scripts ======== -->
+    <script src="js/jquery.min.js"></script>
+    <!-- fontawesome icons -->
+    <script src="js/all.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
