@@ -5,7 +5,7 @@ $("#back").css('background-image', 'url(backgroundImages/background-1.gif)');
 
 setInterval(function () {
 
-    imagesLength = 4;  // write your images quantity  here
+    imagesLength = 3;  // write your images quantity  here
 
     if (imageNumber <= imagesLength - 1) {
         imageNumber++
