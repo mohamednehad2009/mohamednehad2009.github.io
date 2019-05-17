@@ -69,8 +69,8 @@ $("#closeX").click(function(){
 })
 
 // ==== SCRIPT of Sign in button styling ====
-$(window).on("load resize", function () {
-    $(".sign-in").css("margin-bottom", $(".sign-up").height())
+$(document).ready( function () {
+    $(".sign-in").css("margin-bottom", $(".hvr").height())
 });
 
 // ==== SCRIPT of inputs validation ====
